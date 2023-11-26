@@ -1,10 +1,21 @@
 import HeaderLink from "../../components/HeaderLink/HeaderLink";
 import HeaderLinkProps from "../../types/HeaderTypes";
 
-export default function Header({ links }: { links: HeaderLinkProps[] }) {
+export default function Header({
+  links,
+  callbackFn,
+}: {
+  links: HeaderLinkProps[];
+  callbackFn: () => void;
+}) {
   return (
-    <header className="max-w-[1200px] w-full mx-auto flex flex-row items-center justify-between pt-8">
-      <img src="./images/logo.svg" alt="logo" />
+    <header className="max-w-[1200px] w-full absolute left-[calc(50%-600px)] flex flex-row items-center justify-between z-10 top-8">
+      <img
+        onClick={() => callbackFn()}
+        src="./images/logo.svg"
+        alt="logo"
+        className="cursor-pointer"
+      />
       <nav className="flex gap-10 items-center">
         <ul className="flex gap-12">
           {links.map((item, index) => (

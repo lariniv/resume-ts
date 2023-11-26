@@ -12,3 +12,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.gradient--green {
+  background: radial-gradient(50% 50% at 50% 50%, #0a2a38 0%, #101010 70%);
+  @apply w-[775px] h-[775px] absolute bottom-[-25%] left-[3%];
+}
+
+.gradient--pink {
+  background: radial-gradient(50% 50% at 50% 50%, #370a38 0%, #101010 75%);
+  @apply w-[650px] h-[650px] absolute top-[-6%] left-[7%];
+}
+
+.gradient--blue {
+  background: radial-gradient(50% 50% at 50% 50%, #130a38 25%, #101010 80%);
+  @apply w-[800px] h-[800px] absolute top-[4%] right-[8%];
+}
